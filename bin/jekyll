@@ -40,6 +40,10 @@ opts = OptionParser.new do |opts|
     options['server_port'] = port unless port.nil?
   end
 
+  opts.on("--no-server", "No web server") do
+    options['server'] = false
+  end
+
   opts.on("--lsi", "Use LSI for better related posts") do
     options['lsi'] = true
   end
